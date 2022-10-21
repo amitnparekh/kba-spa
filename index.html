@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>KBA App</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+  <!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/ui.js"></script>
+
+  <style>
+    body {
+      background-image: url('https://cdn.staging.auth0.cloud/assets/imgs/TravelZero-Background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="logo-div" align="center">
+    <img src="https://cdn.staging.auth0.cloud/assets/icons/TravelZero-avatar.png" height="50" width="50" />
+  </div>
+  <div align="center">
+    <h2 id="h2-main-title">Knowledge Based Authentication!</h2>
+    <div class="hidden" id="user-msg" align="center"></div>
+  </div>
+
+  <div id="buffer-div" align="center"><br></div>
+
+  <div id="kba-form" align="center">
+
+    <p>
+      <strong>
+        <h1 style="background-color:Tomato;">We need to cross-check a few bits of information before allowing
+          further access.</h1>
+      </strong>
+    </p>
+
+    <table border="1" bgcolor="cyan">
+      <tr>
+        <td align="right">
+          <strong>What is your 'Date of Birth'?</strong>
+          <br>For example enter 5th August 2002 as 05-08-2002.
+        </td>
+        <td>&nbsp;<input id="dob" name="dob" type="text" minLength="10" maxLength="10" placeholder="DD-MM-YYYY" />&nbsp;
+        </td>
+      </tr>
+
+      <tr>
+        <td align="right">
+          <strong>What is your 'Post Code'?</strong>
+        </td>
+        <td>&nbsp;<input id="postcode" name="postcode" type="text" minLength="4" maxLength="4"
+            placeholder="1234" />&nbsp;</td>
+      </tr>
+    </table>
+    <br>
+    <button id="btn-call-api1" onclick="callApi('upload')">Submit</button>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p style="background-color:yellowgreen;"><b>The below information is for demo & debugging only. It will normally be
+        hidden.</b></p>
+
+    <table border="1" bgcolor="LightGray">
+      <tr>
+        <td>User ID:</td>
+        <td><input id="userId" name="userId" type="text" disabled="true" size="60" /></td>
+      </tr>
+
+      <tr>
+        <td>Email Id:</td>
+        <td><input id="emailId" name="emailId" type="text" disabled="true" size="60" /><br></td>
+      </tr>
+
+      <tr>
+        <td>Auth0 State:</td>
+        <td><textarea id="auth0State" name="auth0State" type="text" disabled="true" rows="2" cols="100"></textarea>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</body>
+
+</html>
