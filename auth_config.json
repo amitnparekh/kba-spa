@@ -1,0 +1,11 @@
+{
+  "domain": "<your_auth0_domain>",
+  "mgmtAPI_clientId": "<client_id_of_your_auth0_domain_API_Explorer_App>",
+  "mgmtAPI_clientSecret": "<client_secret_of_your_auth0_domain_API_Explorer_App>",
+  "mgmtAPI_scopes": "read:users update:users read:client_grants read:users_app_metadata update:users_app_metadata create:users_app_metadata delete:users_app_metadata",
+  "mgmtAPI_audience": "https://<your_auth0_domain>/api/v2/",
+  "Comment-2": "The mgmtAPI_clientId and mgmtAPI_clientSecret above are those of the 'demo-deployment' M2M app",
+  "orgName": "<Your_SPA_Name>",
+  "httpPort": 7000,
+  "httpsPort": 7443
+}
