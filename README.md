@@ -1,6 +1,6 @@
-# Sample 01 - Login
+# Sample SPA for Knowledge Based Check
 
-The purpose of this article is to demonstrate how simple it is to set up and use the new Single Page Application SDK, and authenticate a user in your application using Auth0's Universal Login Page.
+The purpose of this article is to demonstrate how simple it is to set up and use the new Single Page Application to use with a redirect flow from Auth0 Rules after authenticating a user in your application using Auth0's Universal Login Page.
 
 ## Running the Sample Application
 
@@ -8,13 +8,8 @@ The sample can be run locally, by cloning the repository to your machine and the
 
 ### Specifying Auth0 Credentials
 
-To specify the application client ID and domain, make a copy of `auth_config.json.example` and rename it to `auth_config.json`. Then open it in a text editor and supply the values for your application:
-
-```json
-{
-  "domain": "parekh.au.auth0.com",
-  "clientId": "8OOy9Pn9kwESEARFpMDWketLEAy6nOze"
-}
+Edit the `auth_config.json` file and put the required values in it.
+Edit the "/public/js/app.js" file for the baseURL in line # 20. This is nothing but the Auth0 domain.
 ```
 
 ### Installation
